@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github Profile Viewer</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap");
+      * {
+        font-family: "Poetsen One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0; 
+      }
+      .img img{
+        margin-top:300px;
+      margin-bottom: 50px;
+
+      }
+      .container{
+border: 2px solid red;
+display: flex;
+flex-direction: column;
+height: 200vh;
+align-items: center;
+justify-content: center;
+gap: 2rem;
+margin-top: 20px;
+padding-bottom: 100px;
+      }
+      .profilebox:hover{
+        transform: rotate(-10deg) ;
+        transition:  0.5s ease-in-out;
+
+      }
+      .search{
+     
+        display: flex;
+        width:50%;
+        gap: 2rem;
+      }
+      .search input{
+        padding: 0.5rem 1rem ;
+        width: 100%;
+        text-align: center;
+      }
+      .primarybtn{
+        background:purple;
+        color: white;
+        padding:  0.55rem 1rem;
+        border: none;
+
+      }
+      .search input:focus-visible{
+        outline: 4px solid purple;
+      }
+      .primarybtn:hover{
+        background: rgba(50, 2, 50, 0.788);
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+      }
+      .primarybtn:active{
+        background: rgba(231, 59, 231, 0.788);
+      }
+      .profilebox{
+border: 2px solid red;
+   /* padding: 4rem 2rem; */
+   box-shadow: 10px 10px 10px rgba(21, 21, 21, 0.5); 
+   margin-top: 20px;
+    width: 90%;
+    /* margin-bottom: 2rem; */
+    border: 50px;
+    height: fit-content;
+
+
+
+      }
+      .avatar{
+        height: 10rem;
+        width: 10rem;
+        border-radius: 50%;
+        border: 2px solid yellow;
+      }
+      .avatar img{
+        height: 10rem;
+        width: 10rem;
+        border-radius: 50%;
+      }
+      .topsection{
+        /* border: 2px solid black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+      }
+      .left{
+        display: flex;
+        align-items: center;
+        /* border: 20px solid green; */
+        gap:2em;
+      }
+      .topsection button{
+   align-self: center;
+        height: 30%;
+        
+      }
+      .about{
+        margin: 2rem;
+      }
+      .status{
+        /* border: 2px solid black; */
+        display: flex;
+        justify-content: space-between;
+       gap: 20px;
+
+      }
+     
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="img">
+            <img src="https://tse1.explicit.bing.net/th?id=OIP.fqZ9-PPqcG_cm0k3JfoINQAAAA&pid=Api&P=0&h=180" alt="">
+        </div>
+      <h1>Search Github Profile</h1>
+      <div class="search">
+        <input
+          id="searchinput"
+          name="searchinput"
+          type="text"
+          placeholder="Enter Your Github Username"
+        />
+        <button id="searchbtn" class="primarybtn">Search</button>  
+    </div>
+    <div id="profilecontainer"> </div>
+    <div id="loading"></div>
+  
+<script src="script2.js"></script>
+  </body>
+</html>
